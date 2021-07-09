@@ -9,3 +9,8 @@ This is a WIP exercise for Ferrous Teaching Material, demonstrating:
 * Using `bindgen` to generate a Rust interface
 * Calling the rust-pretending-to-be-C interfaces using FFI (see the `reverse-calc-ffi/` crate)
 
+## License
+
+Code included in this repo is licensed under the MIT License.
+
+Prose/text/documentation included in this repo is licensed under the CC-BY-SA license.
