@@ -1,0 +1,5 @@
+[build]
+rustflags = [
+  "-l", "calc_ffi",
+  "-L", "./../calc-ffi/target/debug"
+]
