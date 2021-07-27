@@ -11,6 +11,23 @@ This is a WIP exercise for Ferrous Teaching Material, demonstrating:
 
 ## Instructions (mostly for the trainer)
 
+### Step Zero: Prerequisites
+make sure everyone knows:
+- what is an ABI?
+- why do we need a stable ABI when we interop with other languages?
+- what does FFI mean?
+
+intro could go something like this:
+- an ABI describes how a program is organized *at the binary level* (e.g. when I call a function, which register holds which parameter, how are they ordered, how do I construct my call stack)
+- Rust's ABI isn't stable yet *on purpose* because that might lock us out of performance benefits in the future
+- opinions vary in C++ ABI's stability (e.g. Android considers its unstable!)
+- C ABI is "set in stone" because it's so old -> the de-facto "lingua franca"
+    - we use that when interoperating with other languages so everyone agrees on which register holds which function paramters, etc
+    - *but* it is really limited!
+- FFI = "Foreign Function Interface"
+    - can be between any language!
+    - but the C ABI is the glue, usually (e.g. you might translate Rust -> C ABI -> Go)
+
 ### Step One: Start with the calc crate
 
 Here, there are a couple of important things to point out:
